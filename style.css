@@ -45,6 +45,11 @@
 
 }
 
+/* body */
+
+.body-container{
+    width: 100vw;
+}
 
 /* ------------------------------- */
 /* hederr css */

@@ -282,7 +282,7 @@
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
-    background-image: url(/assets/rohan-gupta.png);
+    background-image: url(./assets/rohan-gupta.png);
 }
 
 @media (max-width: 576px) {

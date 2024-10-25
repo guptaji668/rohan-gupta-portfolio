@@ -8,7 +8,7 @@
          // Update the logo images based on the theme
     const logoImages = document.querySelectorAll('.logo-name img'); // Select all logo images
     logoImages.forEach((logoImg) => {
-        logoImg.src = theme === 'dark' ? "../assets/darklogo-rohan.png" : "../assets/lightlogo-rohan.png";
+        logoImg.src = theme === 'dark' ? "./assets/darklogo-rohan.png" : "./assets/lightlogo-rohan.png";
     });
     }
     //console.log(`Switched to ${theme} theme`);

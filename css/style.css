@@ -1,0 +1,540 @@
+/* global variable */
+:root{
+    --font-family: 'Rubik', sans-serif;
+    --primary-color: #415de6;
+    --secondary-color: #e64157;
+    --tertiary-color: #12c2e9;
+    --primary-gradient-color: linear-gradient(90deg,#e64157,#415de6);
+    --secondary-gradient-color: linear-gradient(to right, #12c2e9, #f64f59, #f64f59);
+    --underline-gradient: linear-gradient(to left, #12c2e9, #c471ed, #f64f59);
+    --vertical-gradient: linear-gradient(to top, #12c2e9, #c471ed, #f64f59);
+    --headerlightbg: #ffffff;
+    --headerDarkbg : #000000;
+
+}
+
+/* Preloader */
+
+
+#preloader {
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+   
+}
+
+
+.spinner {
+    border: 10px solid #f3f3f3; 
+    border-top: 10px solid #751de0;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    /* animation: spin 2s linear infinite; */
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+
+
+
+#hero {
+    position: relative;
+    padding: 100px 0px 50px 0px;
+    min-height: 100vh;
+    /* background-image: url("https://media.istockphoto.com/id/1195524132/video/dynamic-retro-background-4k-resolution-loopable.jpg?s=640x640&k=20&c=oaRjlczoX8_-GA58WYCYFr36-rrlSdTX308oKr1VMRA=");
+    opacity: -5px; */
+}
+
+@media (max-width:768px) {
+    #hero{
+        min-height: 0;
+        
+
+    }
+    
+    
+}
+
+@media (max-width:600px) {
+    .container{
+        padding: 20px;
+    }
+
+    
+}
+
+
+#hero .name {
+    background: var(--primary-gradient-color);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: slideInAndFade 2s ease-in-out forwards;
+}
+
+@keyframes slideInAndFade {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(50);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+#hero .btn-showcase {
+    border-radius: 32px;
+    border-color: #7042f88b;
+    border-width: 1px;
+    backdrop-filter: blur(6px); 
+    -webkit-backdrop-filter: blur(6px); 
+    box-shadow: inset 0 -7px 11px rgba(141, 53, 229, .136);
+    -webkit-box-shadow: inset 0 -7px 11px rgba(141, 53, 229, .136);
+    transition: box-shadow .45s cubic-bezier(.6,.6,0,1);
+    -webkit-transition: box-shadow .45s cubic-bezier(.6,.6,0,1);
+}
+
+#hero .btn-showcase i {
+    font-size: 13px;
+}
+
+#hero .btn-showcase:hover {
+    box-shadow: inset 0 -7px 11px rgba(141, 53, 229, .536);
+}
+
+#hero .badge-button {
+    margin-bottom: 15px;
+}
+
+#hero .tagline {
+    letter-spacing: 1.5px;
+    color: var(--muted-text);
+}
+#hero .cvbtn {
+    background-color: #8c1ad7c5;
+    color: #ffffff;
+    border: none;
+    &:hover{
+        background-color: #6f05b5d7;
+        
+    }
+    animation: upbtn  2s ease-in-out forwards;
+}
+@keyframes upbtn {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(50);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.hero-portrait .pic {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 45vw;
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-image: url(/assets/rohan-gupta.png);
+}
+
+@media (max-width: 576px) {
+    #hero {
+        padding: 35px 0px 0px 0px;
+    }
+
+    .hero-portrait {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        max-width: 170px;
+        height: 170px;
+        max-height: 170px;
+        margin: 0 auto;
+        border: solid 3px transparent;
+        border-radius: 50%;
+        background-image: var(--primary-gradient-color), radial-gradient(circle at top left, var(--primary-color),var(--secondary-color));;
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+    }
+
+    .hero-portrait .pic {
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(/assets/rohan-gupta.png);
+    }
+
+    .hero-content{
+        margin-top: 35px;
+    }
+
+    #hero .btn-showcase {
+        font-size: 12px;
+    }
+
+    #hero .tagline {
+        font-size: 14px;
+        letter-spacing: 1.2px;
+    }
+
+    .social-icon{
+      width: 20px;
+      height: 20px;
+    }
+
+  
+
+    #hero .call-to-action{
+        margin-top: 0px;
+    }
+}
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+#about{
+    padding: 100px 0px;
+    /* background-image: url(/assets/grid.png); */
+    background-size: contain;
+    min-height: 100vh;
+}
+
+.about-portrait{
+    display: flex;
+    padding: 0px 20px 0px 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-portrait::before {
+    content: "";
+    background-color: transparent;
+    /* height: 450px;
+    width: 450px; */
+    position: absolute;
+    z-index: -2;
+    box-shadow: 2px 2px 0px inset var(--primary-color), -2px -2px 0px inset transparent;
+    -webkit-box-shadow: 2px 2px 0px inset var(--primary-color), -2px -2px 0px inset transparent;
+    transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+}
+
+.about-portrait:hover::before {
+    transform: translate(-23px,-23px);
+    transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+}
+
+.about-portrait::after {
+    content: "";
+    background-color: transparent;
+    /* height: 450px;
+    width: 450px; */
+    position: absolute;
+    z-index: -2;
+    box-shadow: 2px 2px 0px inset transparent, -2px -2px 0px inset var(--primary-color);
+    -webkit-box-shadow: 2px 2px 0px inset transparent, -2px -2px 0px inset var(--primary-color);
+    transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+}
+
+.about-portrait:hover::after {
+    transform: translate(35px,30px);
+    transition-duration: .5s;
+    -webkit-transition-duration: .5s;
+}
+
+.about-portrait .pic{
+    /* width: 100%;
+    height: 100%; */
+    border-radius: 0.5rem;
+    object-fit: cover;
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 12px 8px 0px 0px #850dd5;
+    -webkit-box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 12px 8px 0px 0px #850dd5;
+}
+
+#about .bio{
+    padding: 30px 0 30px 0;
+    color: var(--muted-text);
+    font-size: 15px;
+    word-spacing: 5px;
+}
+
+    @media (max-width: 576px) {
+        .about-portrait{
+            display: flex;
+            padding: 30px 36px 30px 36px;
+        }
+        .about-portrait .pic {
+            width: 90%;
+        }
+        #about .bio{
+            font-size: 14px;
+            padding: 30px 15px 30px 15px;
+        }
+    }
+
+
+    /*--------------------------------------------------------------
+# Skills Section
+--------------------------------------------------------------*/
+
+#skills{
+    padding: 100px 0px;
+    min-height: 100vh;
+}
+@media (max-width:600px) {
+    #skills{
+        padding: 0px 0px;
+        min-height: 100vh;
+    }
+}
+
+.skill{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+    padding: 18px 0px;
+    border-radius: 25px;
+    backdrop-filter: blur(300px);
+    -webkit-backdrop-filter: blur(300px);
+    box-shadow: 0 0 1px 0 rgba(144,81,227,.5), 0 0 0.5px 0.5px rgba(141,53,229,.336);
+    -webkit-box-shadow: 0 0 1px 0 rgba(144,81,227,.5), 0 0 0.5px 0.5px rgba(141,53,229,.336);
+}
+
+.skill-image{
+    width: 71px;
+    padding: 8px;
+}
+
+.skill-name{
+    letter-spacing: 2px;
+    font-size: 17px;
+    padding-top: 5px;
+    margin: 0;
+}
+
+/* qualification */
+
+#Qualification {
+    padding: 90px 0;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+#Qualification .card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 24px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    height: 100%;  /* Ensures the card stretches to full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Aligns text vertically */
+}
+
+#Qualification .card:hover {
+    transform: translateY(-10px);
+}
+
+#Qualification .circle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#Qualification .circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #915fe9 0%, #5a8dee 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#Qualification .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;  /* Ensures uniform height across all cards */
+}
+
+#Qualification .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#Qualification .card-text {
+    font-size: 1rem;
+    color: var(--muted-text);
+    margin-bottom: 6px;
+}
+
+
+#Qualification h6 span {
+    /* background-color: var(--primary-color); */
+    padding: 6px 12px;
+    border-radius: 30px;
+    /* color: #fff; */
+}
+
+/* Equalize the height of all cards */
+#Qualification .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#Qualification .col-lg-4, 
+#Qualification .col-md-6 {
+    display: flex;
+    justify-content: center;
+}
+
+#Qualification .card {
+    min-height: 350px;  
+    max-width: 400px;  
+}
+
+@media (max-width: 768px) {
+    #Qualification .card {
+        margin-bottom: 30px;
+    }
+}
+
+/* experience section */
+
+#Experience{
+    padding: 90px 0;
+    background-size: cover;
+    min-height: 100vh;
+  
+
+}
+@media (max-width:600px) {
+    #Experience{
+        padding: 20px 0;
+        background-size: cover;
+        min-height: 100vh;
+      
+    
+    }
+}
+
+
+.exp-image-collage-container {
+    width: 100%;
+    height: 100%;
+   
+   
+  
+  }
+
+  /* .exp-image-collage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 5px;
+    height: 100%; 
+
+    padding: 5px;
+   
+  
+  } */
+
+  .exp-image-collage img {
+    cursor: pointer;
+
+    width: 500px;
+    height: 600px;
+  
+  
+  }
+  @media (max-width:600px){
+    .exp-image-collage img{
+
+        width: 500px;
+        height: 400px;
+    }
+  }
+
+
+  .highlight-title {
+    color: #b04bf3;
+}
+
+.highlight-date {
+    color: #34a853;
+}
+
+.highlight-role {
+    color: #fbbc05;
+}
+
+.highlight-company {
+    color: #b04bf3;
+}
+
+.highlight-frontend-backend {
+    color: #34a853;
+}
+
+.highlight-tech {
+    color: #fbbc05;
+}
+
+.highlight-number {
+    color: #b04bf3;
+}
+

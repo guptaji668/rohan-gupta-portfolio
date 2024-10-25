@@ -187,13 +187,7 @@
     
 }
 
-@media (max-width:600px) {
-    .container{
-        padding: 20px;
-    }
 
-    
-}
 
 
 #hero .name {
@@ -613,8 +607,8 @@
   @media (max-width:600px){
     .exp-image-collage img{
 
-        width: 500px;
-        height: 400px;
+width: auto;
+height: auto;
     }
   }
 

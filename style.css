@@ -67,6 +67,10 @@
     width: auto;
     height: 70px;
 }
+.sidebar-logo-img{
+    width: 280px;
+    height: 70px;
+}
 
 .fixed-top{
     backdrop-filter: blur(20px);
@@ -104,7 +108,7 @@
 }
 
 .offcanvas{
-    background-color: var(--offcanvas-bg);
+    /* background-color: var(--offcanvas-bg); */
     
 }
 

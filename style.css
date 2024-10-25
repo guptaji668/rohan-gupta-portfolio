@@ -310,7 +310,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        background-image: url(/assets/rohan-gupta.png);
+        background-image: url(./assets/rohan-gupta.png);
     }
 
     .hero-content{
